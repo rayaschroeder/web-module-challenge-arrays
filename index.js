@@ -107,7 +107,6 @@ Your function should accept:
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
 
-
 function getFlavorByIndex(flavorsList, num){
     console.log(flavorsList[num]);
 }
@@ -130,11 +129,16 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
 
-    /*code here*/
-
+function removeFlavorByName(flavorsList, removedFlavor){
+    let position = flavorsList.indexOf(removedFlavor);
+    flavorsList.splice(position, 1);
+    console.log(flavorsList);
 }
+
+removeFlavorByName(originalFlavors, "Vanilla");
+
+
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
